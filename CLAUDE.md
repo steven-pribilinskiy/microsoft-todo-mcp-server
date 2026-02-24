@@ -7,23 +7,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Build and Development
 
 ```bash
-pnpm install         # Install dependencies
-pnpm run build       # Build with tsup to build/ directory
-pnpm run dev         # Build and run CLI in one command
+bun install         # Install dependencies
+bun run build       # Build with tsup to build/ directory
+bun run dev         # Build and run CLI in one command
 ```
 
 ### Authentication and Setup
 
 ```bash
-pnpm run auth        # Start OAuth authentication server (port 3000)
-pnpm run create-config # Generate mcp.json from tokens.json
+bun run auth        # Start OAuth authentication server (port 3000)
+bun run create-config # Generate mcp.json from tokens.json
 ```
 
 ### Running the Server
 
 ```bash
-pnpm run cli         # Run MCP server via CLI wrapper
-pnpm start           # Run MCP server directly
+bun run cli         # Run MCP server via CLI wrapper
+bun start           # Run MCP server directly
 ```
 
 ## Architecture Overview
@@ -57,7 +57,7 @@ The server communicates with Microsoft Graph API v1.0:
 
 ## Important Notes
 
-- Always run `pnpm run build` after modifying TypeScript files (uses tsup for bundling)
+- Always run `bun run build` after modifying TypeScript files (uses tsup for bundling)
 - The auth server runs on port 3000 by default
 - Tokens are automatically refreshed using the refresh token when needed
 - Personal Microsoft accounts have limited API access compared to work/school accounts
